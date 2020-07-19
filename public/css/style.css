@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #333333;
+    border: none;
+}
+
+/*___________________HEADER____________________*/
+
+header {
+    height: 18vh;
+    background-color: rgba(28, 36, 57, 1);
+    padding: 0 15vw 5px 15vw;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: honeydew;
+}
+
+header h4 {
+    margin: 0;
+    margin-top: 10px;
+    color: wheat;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*_____________________________________________*/
+
+/*___________________PAGE____________________*/
+
+.page {
+    height: 77vh;
+    background-color: powderblue;
+}
+
+/* USERS-LIST */
+
+.users-list-container {
+    display: flex;
+    height: auto;
+    width: 100vw;
+    background-color: rgba(28, 36, 57, 1);
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.room {
+    background-color: rgba(249, 116, 71, 1);
+    height: 45px;
+    width: 100%;
+    padding: 4px;
+}
+
+#room {
+    background-color: rgba(249, 116, 71, 1);
+    display: inline;
+    line-height: 22px;
+}
+
+.users-list-button {
+    width: 120px;
+    height: 45px;
+    box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .2), inset 2px 2px 2px rgba(255, 255, 255, .2);
+    background-color: gray;
+}
+
+.box-users-list {
+    display: none;
+}
+
+.box-users-list-popup {
+    position: fixed;
+    background-color: rgba(28, 36, 57, 1);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+
+.x {
+    margin: -1px 0px;
+    padding: 10px 0;
+    border: 1px solid rgba(249, 116, 71, 1);
+}
+
+.x p {
+    color: gray;
+    font-style: italic;
+}
+
+.x button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 4px 8px 6px 8px;
+    background-color: rgba(249, 116, 71, 1);
+}
+
+.users-list {
+    overflow: auto;
+    height: 60vh;
+}
+
+.users-list h4 {
+    margin: -1px 0;
+    padding: 10px 30px;
+    border: 1px solid rgba(249, 116, 71, 1);
+}
+
+h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: wheat;
+}
+
+/* __________ */
+
+/* CHAT */
+
+.chat {
+    height: 60.4vh;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.bubble-container::-webkit-scrollbar {
+    -webkit-overflow-scrolling: auto;
+    width: 8px;
+}
+
+.bubble-container::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+#xIsWriting {
+    display: block;
+    height: 6px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .4);
+}
+
+.bubble-container {
+    overflow: auto;
+    height: 95%;
+}
+
+.bubblebox {
+    display: flex;
+}
+
+.server-bubble {
+    background-color: rgba(249, 116, 71, .5);
+    color: rgba(0, 0, 0, .6);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.server-bubble p {
+    color: rgba(0, 0, 0, .6);
+}
+
+.personal-bubble {
+    background-color: rgba(249, 116, 71, 1);
+    width: auto;
+    max-width: 350px;
+    min-height: 40px;
+    position: relative;
+    margin-left: auto;
+    margin-right: 20px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.personal-bubble::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left-color: rgba(249, 116, 71, 1);
+    border-right: 0;
+    margin-right: -7px;
+}
+
+.other-user-bubble {
+    background-color: #cccccc;
+    width: auto;
+    max-width: 350px;
+    min-height: 40px;
+    position: relative;
+    margin-right: auto;
+    margin-left: 20px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.other-user-bubble::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-right-color: #cccccc;
+    border-left: 0;
+    margin-left: -7px;
+}
+
+.time {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .4);
+    text-align: right;
+    margin-top: 3px;
+}
+
+h6 {
+    margin-bottom: 5px;
+}
+
+.chat-form {
+    height: 8vh;
+    width: 100%;
+    margin-top: 0.5vh;
+    padding-right: 45px;
+    padding-left: 5px;
+    position: relative;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.chat-button {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    padding: 2px 3px;
+    background-color: rgba(249, 116, 71, 1);
+    border-radius: 15%;
+    color: honeydew;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-button:hover {
+    cursor: pointer;
+}
+
+/* ____ */
+
+/*___________________________________________*/
+
+/*___________________FOOTER____________________*/
+
+footer {
+    height: 5vh;
+    background-color: gray;
+    text-align: center;
+    padding-top: 1vh;
+}
+
+footer a {
+    color: #333333;
+}
+
+/*_____________________________________________*/
+
+
+/* _______________index.html_________________ */
+.login-page {
+    background-color: rgba(247, 247, 247, 1);
+}
+
+.login-box {
+    background-color: rgba(28, 36, 57, 1);
+    width: 100vw;
+    height: 100vh;
+    padding: 20vh 15vw;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#username_input {
+    background-color: rgba(249, 116, 71, 1);
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto 15px auto;
+}
+
+#username_input::placeholder {
+    text-align: center;
+    color: rgba(28, 36, 57, 1);
+}
+
+.login-button {
+    background-color: wheat;
+    padding: 5px 10px;
+}
+/*_____________________________________________*/
+
+
+@media only screen and (min-width: 670px) {
+
+
+    header {
+        height: 10vh;
+        display: flex;
+        padding: 0 15vw 0 15vw;
+        justify-content: space-between;
+        text-align: right;
+    }
+
+    .page {
+        height: 85vh;
+        background-color: rgba(247, 247, 247, 1);
+        display: flex;
+        padding: 5vh 15vw;
+    }
+    .users-list-container {
+        height: auto;
+        width: 20vw;
+        min-width: 130px;
+        display: initial;
+    }
+    .box-users-list {
+        display: initial;
+    }
+    .users-list-button {
+        display: none;
+    }
+
+    .chat-container {
+        width: 100%;
+        height: 75vh;
+        margin-left: 10px;
+    }
+    .chat {
+        height: 65vh;
+    }
+    .chat-form {
+        margin-top: 2vh;
+    }
+    .login-page {
+        height: 100vh;
+        display: flex;
+        padding-bottom: 100px;
+    }
+    .login-box {
+        width: 300px;
+        height: 300px;
+        padding: 30px 20px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, .6);
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
+    <title>Chat Mask</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ChatMask</h1>
+        <div>
+            <h4 id="username"></h4>
+            <a href="/">logout</a>
+        </div>
+    </header>
+
+    <div class="page">
+
+        <div class="users-list-container">
+            <div class="room">
+                <p>room: </p>
+                <h4 id="room"></h4>
+            </div>
+
+            <button class="users-list-button" id="users_list_button">
+                Utenti&nbsp;(<span id="utentsnumber"></span>)
+            </button>
+
+            <div class="box-users-list" id="box_users_list">
+                <div>
+                    <div class='x'>
+                        <p>Utenti connessi</p>
+                        <div id="close_popup"></div>
+                    </div>
+                    <div class="users-list" id="users_list"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat">
+                <p><em id="xIsWriting"></em></p>
+                <div class="bubble-container"></div>
+            </div>
+
+
+            <form class='chat-form' id="chat-form" action="">
+                <textarea name="message_compailer" id="message_compailer" cols=100" rows="3"></textarea>
+                <button class="chat-button" type="submit">Invia</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <a href="mailto:simone.dellerose@hotmail.it">Created by Simone Delle Rose</a>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>

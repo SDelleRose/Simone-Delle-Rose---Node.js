@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <form class='login-box' id="login" action="chat.html">
+
+            <h4>Benvenuto in <br> ChatMask</h4>
+            <h4>Scegli la tua chatroom</h4>
+            
+            <select name="room" id="room">
+                <option value="Generale">Generale</option>
+                <option value="Libri">Libri</option>
+                <option value="Film">Film</option>
+                <option value="Amore">Amore</option>
+                <option value="Lavoro">Lavoro</option>
+                <option value="Scuola">Scuola</option>
+                <option value="Videogame">Videogame</option>
+                <option value="Manga">Manga</option>
+                <option value="Cucina">Cucina</option>
+            </select>
+
+            <input type="text" placeholder="new username" name='username' id="username_input" maxlength="10" required>
+
+            <button class="login-button" type="submit">Avanti</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
